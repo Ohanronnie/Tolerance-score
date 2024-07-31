@@ -1,6 +1,6 @@
 import timeout from 'connect-timeout'
 import { ENVIRONMENT } from '../config/environment.js'
-import { logger } from './logger.js'
+//import { logger } from './logger.js'
 
 /**
  * Wraps an async function to handle errors.
@@ -24,9 +24,9 @@ export const handleError = (err, req, res, next) => {
 
     const { statusCode, message, data } = err
 
-    logger.error(
+  /*  logger.error(
         `${statusCode} - ${message} - ${req.originalUrl} - ${req.method} - ${req.ip}`
-    )
+    )*/
 
     if (err.timeout) {
         return res.status(408).send({
