@@ -105,3 +105,4 @@ app.listen(port, () => {
         } catch (error) {}
     })()
 })
+export default app;
