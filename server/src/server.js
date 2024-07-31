@@ -10,7 +10,7 @@ import {
 import cors from 'cors'
 import helmet from 'helmet'
 import compression from 'compression'
-import { stream } from './common/utils/logger.js'
+//import { stream } from './common/utils/logger.js'
 import morgan from 'morgan'
 import { connectDb } from './common/config/database.js'
 import csvParser from 'csv-parser'
@@ -35,7 +35,8 @@ app.disable('x-powered-by')
 app.use(compression())
 
 /**
- * Logger Middleware
+ * w
+Logger Middleware
  */
 app.use(
     morgan(ENVIRONMENT.APP.ENV !== 'local' ? 'combined' : 'dev', { stream })
