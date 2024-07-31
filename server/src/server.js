@@ -39,7 +39,7 @@ app.use(compression())
 Logger Middleware
  */
 app.use(
-    morgan(ENVIRONMENT.APP.ENV !== 'local' ? 'combined' : 'dev', { stream })
+    morgan(ENVIRONMENT.APP.ENV !== 'local' ? 'combined' : 'dev')
 )
 
 // append request time to all request
